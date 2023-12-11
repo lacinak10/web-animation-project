@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rain.css">
+</head>
+<body>
+    <div class="ground">
+         <div class="container">
+            <div class="div1">
+            </div>
+         </div>
+    </div>
+    <script>
+         const div1=document.querySelector('.div1')
+        function rain(){
+            let e=document.createElement('div')
+            e.classList.add('rain')
+            div1.appendChild(e)
+            let left=Math.floor(Math.random()*320)
+            let duration=Math.random()*0.5
+            e.style.left=left+"px"
+            e.style.animationDuration=1+duration+"s"
+
+            setTimeout(() => {
+                div1.removeChild(e)
+            }, 2000);
+        }
+
+        setInterval(
+            function(){
+                rain()
+            },
+            10
+        )
+    </script>
+</body>
+</html>
