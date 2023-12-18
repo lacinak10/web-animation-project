@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Background.css">
+    <title>Annimation de fonds de couleur aléatoire</title>
+</head>
+<body>
+    <div class="box">
+        <div class="cercle"></div>
+    </div>
+    <script>
+        function changerBG(){
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = "rgba(" + r + "," + g + "," + b +")";
+        }
+        setInterval(changerBG, 1000)
+    </script>
+</body>
+</html>
